@@ -5,7 +5,6 @@ fn find_number(line: &str) -> u32 {
     format!("{d1}{d2}").parse().unwrap()
 }
 
-
 fn find_and_replace_number(line: &str) -> u32 {
     let line = line
         .replace("one", "o1e")
@@ -20,7 +19,6 @@ fn find_and_replace_number(line: &str) -> u32 {
         .replace("zero", "z0o");
     find_number(&line)
 }
-
 
 fn main() {
     let input = std::fs::read_to_string("src/input01.txt").unwrap();
