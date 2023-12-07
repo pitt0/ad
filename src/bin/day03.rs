@@ -184,11 +184,7 @@ fn star_found(matrix: &Matrix, position: Position) -> Option<u32> {
         if n_found == 2 {
             let n1 = numbers.first().unwrap();
             let n2 = numbers.last().unwrap();
-            // if n1 == &848u32 || n2 == &848u32 {
-            //     println!("Found on line {}", position.y);
-            // }
             let r = n1 * n2;
-            // println!("{n1}*{n2}={r}");
             return Some(r);
         }
     }
@@ -198,7 +194,7 @@ fn star_found(matrix: &Matrix, position: Position) -> Option<u32> {
 fn main() {
     let input = std::fs::read_to_string("src/input03.txt").unwrap();
     let mut matrix = Matrix::new();
-    for line in input.split('\n') {
+    for line in input.lines() {
         matrix.push(line);
     }
     let s = input

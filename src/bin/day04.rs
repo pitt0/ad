@@ -23,8 +23,7 @@ fn get_id(game_name: &str) -> u8 {
 }
 
 fn get_numbers_vec(s: &str) -> Vec<u8> {
-    s.split(' ')
-        .filter(|s| s.parse::<u8>().is_ok())
+    s.split_ascii_whitespace()
         .map(|s| s.parse().unwrap())
         .collect()
 }
