@@ -65,7 +65,7 @@ fn main() {
             // if wins.get(index + w + 1).is_none() {
             //     wins[index + w + 1] = 0
             // }
-            let to_add = wins.get(index).unwrap().clone();
+            let to_add = *wins.get(index).unwrap();
             wins[index + w + 1] += to_add;
         }
     }
